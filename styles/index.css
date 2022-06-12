@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: "PT Sans";
+  font-size: 24px;
+  text-align: center;
+  margin: 0;
+  overflow: overlay;
+}
+
+a {
+  color: #0000ee;
+}
+
+nav {
+  background-color: rgb(214, 255, 212);
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+.nav-links {
+  position: relative;
+  top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links a {
+  margin: 0 2%;
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+
+.nav-links a:hover {
+  color: blue;
+  box-shadow: 0px 2px 0px 0px blue;
+}
+
+.nav-current-page {
+  box-shadow: 0px 2px 0px 0px black;
+}
+.nav-current-page:hover {
+  color: blue;
+  box-shadow: 0px 2px 0px 0px blue;
+}
+
+.main-header {
+  text-decoration: underline;
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: limegreen;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  margin: 0 1px;
+}
+.download-btn:hover {
+  background-color: green;
+}
+.small-text {
+  font-size: large;
+}
+
+.downloads-other-box {
+  background-color: rgb(179, 179, 179);
+  margin: 0px 15%;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.767);
+  text-align: left;
+}
