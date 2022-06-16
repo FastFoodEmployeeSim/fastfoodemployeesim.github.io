@@ -7,6 +7,10 @@ if (document.getElementById('play-on-itch') !== null) {
 
 if (isMobile) {
   document.body.style.fontSize = "18px"
+  document.querySelector("nav").style.height = "40px";
+
+  document.querySelector(".main-header").style.margin = "10px 0 0 0"
+
   if (document.getElementsByClassName("about-text")[0] !== undefined) {
     document.getElementsByClassName("about-text")[0].style.margin = "0 5%"
   }
@@ -18,17 +22,17 @@ if (isMobile) {
   }
 
   if (document.getElementsByClassName("downloads-other-box")[0] !== undefined) {
-    document.getElementsByClassName("downloads-other-box")[0].style.fontSize = "16px";
+    
     document.getElementsByClassName("downloads-other-box")[0].style.paddingLeft = "15px"
     document.getElementsByClassName("downloads-other-box")[0].style.paddingRight = "5px"
-    document.getElementsByClassName("downloads-other-box")[0].style.margin = "0 5%"
+    document.getElementsByClassName("downloads-other-box")[0].style.margin = "0 4%"
   }
 
   if (document.getElementsByClassName("game-guide-main")[0] !== undefined) {
     document.getElementsByClassName("game-guide-main")[0].style.fontSize = "16px";
     document.getElementsByClassName("game-guide-main")[0].style.paddingLeft = "15px"
     document.getElementsByClassName("game-guide-main")[0].style.paddingRight = "5px"
-    document.getElementsByClassName("game-guide-main")[0].style.margin = "0 5%"
+    document.getElementsByClassName("game-guide-main")[0].style.margin = "0 4%"
 
     for (var i = 0; i < document.getElementsByClassName("game-guide-main")[0].getElementsByTagName("p").length; i++) {
       document.getElementsByClassName("game-guide-main")[0].getElementsByTagName("p")[i].style.marginLeft = "20px"
@@ -40,6 +44,7 @@ if (isMobile) {
 
   }
 
-  document.getElementsByClassName("nav-links")[0].style.top = "15px"
 
+  document.getElementsByClassName("nav-links")[0].style.top = "9px"
+  
 }
