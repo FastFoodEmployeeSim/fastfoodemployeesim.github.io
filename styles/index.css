@@ -6,11 +6,19 @@ body {
   text-align: center;
   margin: 0;
   overflow: overlay;
+  background-image: url("/img/background-tile-1-dark85.png");
+  color: white;
+  background-position: -30px top;
 }
 
 a {
-  color: #0000ee;
+  color: #00eee2;
 }
+
+/* .text-on-bg p, .text-on-bg h1, .text-on-bg h2, .text-on-bg h3, h1 {
+  background-color: rgba(7, 7, 7, 0.685);
+  color: rgba(255, 255, 255, 0.74);
+} */
 
 nav {
   background-color: rgb(71, 213, 252);
@@ -76,6 +84,10 @@ nav {
   border-radius: 5px;
   box-shadow: 0 0 10px 0 gray;
   text-align: left;
+  color: black;
+}
+.downloads-other-box a {
+  color: #0000ee;
 }
 .about-text {
   margin: 0 10%;
@@ -87,12 +99,16 @@ nav {
   padding: 20px 30px;
   border-radius: 5px;
   box-shadow: 0 0 10px 0 gray;
+  color: black;
 }
 .game-guide-main h2 {
   margin: 0 0 10px 0;
 }
 .game-guide-main p {
   margin: 0 35px;
+}
+.game-guide-main a {
+  color: #0000ee;
 }
 .game-guide-main ul, ol {
   margin: 5px 60px;
