@@ -1,5 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@media (max-width: 800px) {
+  p, a, button, li {
+    font-size: 20px !important; 
+  }
+  .about-text {
+    margin: 5%;
+  }
+  .main-header, h2 {
+    font-size: 28px;
+  }
+  .nav-links a {
+    font-size: 20px;
+  }
+  .game-guide-main {
+    margin: 0 7% !important;
+  }
+  .game-guide-main p {
+    margin: 0 23px !important;
+  }
+  ul, ol {
+    margin: 0 20px !important;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 675px) {
+  p, li, a, button {
+    font-size: 17px;
+  }
+  .about-text {
+    margin: 3%;
+  }
+  .main-header, h2 {
+    font-size: 27px;
+  }
+  .nav-links a {
+    font-size: 20px;
+  }
+  .game-guide-main {
+    margin: 0 3% !important;
+    padding: 5px, 7px;
+  }
+  .game-guide-main p {
+    margin: 0 10px !important;
+  }
+  ul, ol {
+    margin: 0 0px !important;
+    font-size: 17px;
+  }
+}
+
 body {
   font-family: "PT Sans";
   font-size: 24px;
@@ -9,6 +60,29 @@ body {
   background-image: url("/img/background-tile-1-dark85.png");
   color: white;
   background-position: -30px top;
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(0, 132, 255);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 132, 255);
+  border-radius: 10px;
+}
+
+
+button {
+  font-family: "PT sans";
+}
+
+hr {
+  border-color: black;
 }
 
 a {
@@ -136,4 +210,69 @@ kbd {
   color: #777;
   text-align: center;
   margin: 0;
+}
+
+.modem {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #d7d7d7 !important;
+  color: black;
+  padding: 15px 25px;
+  border-radius: 5px;
+  z-index: 3;
+  margin: 0;
+  display: none;
+  box-shadow: 0 0 10px 0 black;
+}
+
+.modem .modem-close {
+  background: none;
+  border: none;
+  font-size: 35px;
+  position: absolute;
+  right: 0px;
+  top: -10px;
+  cursor: pointer;
+  display: none;
+}
+
+.modem .modem-close:hover {
+  color: rgb(82, 82, 82);
+}
+
+.modem .modem-button {
+  background-color: #b3b3b3 !important;
+  border: none;
+  border-radius: 3px;
+  font-size: 20px;
+  padding: 5px 20px;
+  cursor: pointer;
+  z-index: 4;
+  transition: 0.2s ease;
+}
+
+.modem .modem-button:hover {
+  box-shadow: 0 0 0 5px #b3b3b3;
+  background-color: #969696 !important;
+}
+
+.modem p {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modem-dim {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.411);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: none;
 }

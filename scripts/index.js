@@ -1,50 +1,31 @@
-var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (document.getElementById('play-on-itch') !== null) {
-  document.getElementById('play-on-itch').onclick = () => {
-    document.getElementById('play-on-itch').innerText = 'When it comes out...'
+var _modem_modem = document.getElementById("modem")
+var _dim_modem = document.getElementById("modem-dim")
+var _text_modem = document.getElementById("modem-text")
+var _button_modem = document.getElementById("modem-button")
+var _close_modem = document.getElementById("modem-close")
+
+_close_modem.addEventListener("click", () => {
+  modemClose()
+})
+
+function modemShow(text, buttonText, close_btn, continue_func) {
+  _text_modem.textContent = text;
+  _button_modem.innerText = buttonText;
+  _modem_modem.style.display = "unset";
+  _dim_modem.style.display = "unset";
+  if (close_btn === true) {
+    close_btn.style.display = "unset"
   }
+  _button_modem.addEventListener("click", (e) => {
+    eval(continue_func)
+  })
+  document.body.style.overflow = "hidden"
 }
 
-if (isMobile) {
-  document.body.style.fontSize = "18px"
-  document.querySelector("nav").style.height = "40px";
-
-  document.querySelector(".main-header").style.margin = "10px 0 0 0"
-
-  if (document.getElementsByClassName("about-text")[0] !== undefined) {
-    document.getElementsByClassName("about-text")[0].style.margin = "0 5%"
-  }
-
-  if (document.getElementsByClassName("download-btn")[0] !== undefined) {
-    for (var i = 0; i < document.getElementsByClassName("download-btn").length; i++) {
-      document.getElementsByClassName("download-btn")[i].style.padding = "10px"
-    }
-  }
-
-  if (document.getElementsByClassName("downloads-other-box")[0] !== undefined) {
-    
-    document.getElementsByClassName("downloads-other-box")[0].style.paddingLeft = "15px"
-    document.getElementsByClassName("downloads-other-box")[0].style.paddingRight = "5px"
-    document.getElementsByClassName("downloads-other-box")[0].style.margin = "0 4%"
-  }
-
-  if (document.getElementsByClassName("game-guide-main")[0] !== undefined) {
-    document.getElementsByClassName("game-guide-main")[0].style.fontSize = "16px";
-    document.getElementsByClassName("game-guide-main")[0].style.paddingLeft = "15px"
-    document.getElementsByClassName("game-guide-main")[0].style.paddingRight = "5px"
-    document.getElementsByClassName("game-guide-main")[0].style.margin = "0 4%"
-
-    for (var i = 0; i < document.getElementsByClassName("game-guide-main")[0].getElementsByTagName("p").length; i++) {
-      document.getElementsByClassName("game-guide-main")[0].getElementsByTagName("p")[i].style.marginLeft = "20px"
-    }
-
-    for (var i = 0; i < document.getElementsByClassName("game-guide-main")[0].getElementsByTagName("ul").length; i++) {
-      document.getElementsByClassName("game-guide-main")[0].getElementsByTagName("ul")[i].style.marginLeft = "30px"
-    }
-
-  }
-
-
-  document.getElementsByClassName("nav-links")[0].style.top = "9px"
-  
+function modemClose() {
+  _modem_modem.style.display = "none";
+  _dim_modem.style.display = "none";
+  _text_modem.textContent = "";
+  _button_modem.innerText = "";
+  document.body.style.overflow = "overlay"
 }
