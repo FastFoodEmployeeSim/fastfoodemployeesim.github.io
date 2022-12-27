@@ -161,6 +161,7 @@ kbd {
   text-decoration: none;
   transition-duration: 0.2s;
   margin: 5px 1px;
+  user-select: none;
 }
 .download-btn:hover {
   background-color: green;
